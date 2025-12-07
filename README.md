@@ -6,57 +6,57 @@ The project uses MediaPipe, OpenCV, and custom logic to detect hand landmarks, f
 
 📑 Table of Contents
 
-Features
+•Features
 
-How It Works
+•How It Works
 
-Project Structure
+•Project Structure
 
-Installation
+•Installation
 
-How to Run
+•How to Run
 
-Usage (Hand Gestures)
+•Usage (Hand Gestures)
 
-Controls & UI Buttons
+•Controls & UI Buttons
 
-Dependencies
+•Dependencies
 
-Troubleshooting
+•Troubleshooting
 
 🚀 Features
 
-Real-time hand tracking using MediaPipe
+•Real-time hand tracking using MediaPipe
 
-Draw on a virtual whiteboard by lifting only your index finger
+•Draw on a virtual whiteboard by lifting only your index finger
 
-Color palette toggle
+•Color palette toggle
 
-Pen size selection
+•Pen size selection
 
-Eraser tool
+•Eraser tool
 
-Clear entire canvas
+•Clear entire canvas
 
 Toggle whiteboard visibility
 
-Smooth line drawing and finger-following cursor
+•Smooth line drawing and finger-following cursor
 
-Fully gesture-controlled (no mouse/keyboard needed)
+•Fully gesture-controlled (no mouse/keyboard needed)
 
 🧠 How It Works
 
-The app uses a custom class HandTracker (in handTracker.py) to:
+•The app uses a custom class HandTracker (in handTracker.py) to:
 
-Detect hands using MediaPipe Hands
+•Detect hands using MediaPipe Hands
 
-Extract landmark positions
+•Extract landmark positions
 
-Determine which fingers are raised
+•Determine which fingers are raised
 
-Use the index fingertip as the drawing pointer
+•Use the index fingertip as the drawing pointer
 
-The main app (main.py) uses these finger states to toggle UI menus and draw on a transparent canvas layered over the camera feed.
+•The main app (main.py) uses these finger states to toggle UI menus and draw on a transparent canvas layered over the camera feed.
 
 📁 Project Structure
 project/
@@ -65,7 +65,7 @@ project/
 
 🛠 Installation
 1. Clone the project (optional)
-git clone https://github.com/your-repo/hand-gesture-whiteboard.git
+git clone [https://github.com//hand-gesture-whiteboard.git](https://github.com/Vaibhavsagupta/hand-sketch)
 cd hand-gesture-whiteboard
 
 2. Create a virtual environment (recommended)
@@ -92,47 +92,47 @@ q
 👋 Usage (Hand Gestures)
 🖊 Draw
 
-Raise only your index finger
+•Raise only your index finger
 
-Keep your finger inside the whiteboard area
+•Keep your finger inside the whiteboard area
 
-Move your hand to draw continuous lines
+•Move your hand to draw continuous lines
 
 🎨 Choose Colors
 
 Raise only your index finger
 
-Tap the Colors button
+•Tap the Colors button
 
-Tap any of the color squares
+•Tap any of the color squares
 
 📏 Change Pen Size
 
-Tap the Pen button
+•Tap the Pen button
 
-Select a size from the list (5–20)
+•Select a size from the list (5–20)
 
 🧽 Eraser
 
-Select the black box labeled “Eraser”
+•Select the black box labeled “Eraser”
 
-Use your finger to erase lines
+•Use your finger to erase lines
 
 🗑 Clear Entire Canvas
 
-Tap Clear
+•Tap Clear
 
 📝 Toggle Whiteboard Visibility
 
 Tap the Board button
 
 🧩 Controls & UI Buttons
-Button	Function
-Colors	Show/hide color palette
-Pen	Show/hide pen sizes
-Eraser	Switch to eraser tool
-Clear	Wipe entire drawing canvas
-Board	Show/hide whiteboard
+•Button	Function
+•Colors	Show/hide color palette
+•Pen	Show/hide pen sizes
+•Eraser	Switch to eraser tool
+•Clear	Wipe entire drawing canvas
+•Board	Show/hide whiteboard
 
 Each menu uses alpha blending to highlight which option is selected.
 
@@ -152,21 +152,3 @@ Install them via:
 
 pip install opencv-python mediapipe numpy
 
-🛠 Troubleshooting
-Webcam not detected
-cap = cv2.VideoCapture(0)
-
-
-Try changing 0 to 1 or 2.
-
-MediaPipe errors
-
-Ensure correct version:
-
-pip install mediapipe==0.10.0
-
-Lag or low FPS
-
-Reduce webcam resolution
-
-Close other applications using the GPU
